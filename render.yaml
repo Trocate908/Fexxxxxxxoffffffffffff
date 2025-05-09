@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flexoff-successful-one
+    env: node
+    plan: free
+    buildCommand: npm install && npx next build
+    startCommand: npx next start
+    envVars:
+      - key: NODE_ENV
+        value: production
